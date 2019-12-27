@@ -1,2 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
+<head>
+  <meta charset="utf-8">
+  <title>Tic-Tac-Toe</title>
+</head>
+<style media="screen">
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: powderblue;
+    padding: 10px;
+  }
 
+  .square {
+    background-color: green;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+  }
+</style>
+
+<body>
+  <script type="text/javascript" src="app.js"></script>
+  <div class="grid-container">
+    <div class="square" id="0" onclick="marker(this)"></div>
+    <div class="square" id="1" onclick="marker(this)"></div>
+    <div class="square" id="2" onclick="marker(this)"></div>
+    <div class="square" id="3" onclick="marker(this)"></div>
+    <div class="square" id="4" onclick="marker(this)"></div>
+    <div class="square" id="5" onclick="marker(this)"></div>
+    <div class="square" id="6" onclick="marker(this)"></div>
+    <div class="square" id="7" onclick="marker(this)"></div>
+    <div class="square" id="8" onclick="marker(this)"></div>
+  </div>
+  <div id="announcement"></div>
+  <button type="button" name="button" onclick= "resetAll()">Reset Board</button>
+</body>
+
+</html>
