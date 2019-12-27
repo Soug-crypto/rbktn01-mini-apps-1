@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var turn = 'X',
+  var turn = 'X', announcementDiv = document.getElementById('announcement'),
     winner, board = [
       [],
       [],
@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   marker = (square) => {
 
-    var announcementDiv = document.getElementById('announcement'),
-      id = square.id,
+    var id = square.id,
       row = Math.floor(id / 3),
       position = id % 3;
 
@@ -61,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
       []
     ];
     let boardDiv = document.getElementsByClassName("grid-container")
-    console.log(Array.isArray(boardDiv[0].children))
-
+    winner = undefined;
+    announcementDiv.innerText = '';
 
     Array.prototype.forEach.call(boardDiv[0].children, (elem) => {
       elem.innerHTML = ""
